@@ -1,0 +1,25 @@
+---
+- name: R1
+  num: 0
+  loopback: no
+  interfaces:
+    - id: 1
+      ip: 172.16.1.1
+      desc: "connection to R2"
+    - id: 2
+      ip: 172.17.1.1
+      desc: "connection to R3"
+- name: R2
+  num: 1
+  loopback: yes
+  interfaces:
+    - id: 1
+      ip: 172.16.1.2
+      desc: "connection to R1"
+- name: R3
+  num: 2
+  loopback: yes
+  interfaces:
+    - id: 1
+      ip: 172.17.1.2
+      desc: "connection to R1"
